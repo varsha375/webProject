@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bulb ON and OFF</title>
+  </head>
+  <body>
+    <image src="blubb on.png" id="img1"></image>
+    <script>
+      function bulboff() {
+        document.getElementById("img1").src = "blub off.png";
+      }
+      function bulbon() {
+        document.getElementById("img1").src = "blubb on.png";
+      }
+    </script>
+    <button type="button" onclick="bulbon()">Turn ON</button>
+    <button type="button" onclick="bulboff()">Turn OFF</button>
+  </body>
+</html>

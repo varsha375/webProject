@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Onmouse and Onmouseout</title>
+  </head>
+  <body>
+    <script>
+      function maximize(x) {
+        x.style.height = "100px";
+        x.style.width = "200px";
+      }
+      function minimize(x) {
+        x.style.height = "300px";
+        x.style.width = "400px";
+      }
+    </script>
+    <img
+      src="blubb on.png"
+      height="50"
+      width="60"
+      onmouseover="maximize(this)"
+      onmouseout="minimize(this)"
+    />
+  </body>
+</html>
