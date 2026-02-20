@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Onload and Onerror Events</title>
+  </head>
+  <body>
+    <style>
+      body {
+        text-align: center;
+        background-color: lightyellow;
+        border: 90px dashed rgb(202, 228, 95);
+        padding: 35px;
+        margin: 50px;
+      }
+      img {
+        height: 200px;
+      }
+    </style>
+    <i><h1>Onload and Onerror Events</h1></i>
+    <img src="maggie.jpeg" onload="img_load()" onerror="img_error()" />
+    <h3>Maggie</h3>
+    <script>
+      function img_load() {
+        alert("Image have been uploaded successfully");
+      }
+      //   function img_load() {
+      //     alert("Image have not been uploaded properly");
+      //   }
+      function img_error() {
+        alert("Image have not been uploaded properly");
+      }
+    </script>
+  </body>
+</html>
