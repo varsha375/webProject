@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>OnBlur Events</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: bisque;
+        text-align: center;
+        display: block;
+      }
+      button {
+        text-align: center;
+      }
+      input {
+        display: block;
+        padding: 10px;
+        margin: 20px auto;
+        text-align: center;
+        width: 250px;
+      }
+      .upperdata {
+        background-color: lightgrey;
+      }
+      .lowerdata {
+        background-color: lightgray;
+      }
+    </style>
+    <script>
+      function upperdata() {
+        var a = document.getElementById("input1");
+        a.value = a.value.toUpperCase();
+      }
+      function lowerdata() {
+        var b = document.getElementById("input2");
+        b.value = b.value.toLowerCase();
+      }
+    </script>
+    <h1>OnBlur Events</h1>
+    <input
+      type="text"
+      id="input1"
+      class="upperdata"
+      onblur="upperdata()"
+      placeholder="Captial Letters only"
+    />
+    <input
+      type="text"
+      id="input2"
+      class="lowerdata"
+      onblur="lowerdata()"
+      placeholder="Small Letters only"
+    />
+  </body>
+</html>
