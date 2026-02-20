@@ -4,6 +4,26 @@
     <title>Bulb ON and OFF</title>
   </head>
   <body>
+    <style>
+      h1 {
+        background-color: antiquewhite;
+        padding: 10px;
+      }
+      body {
+        background-color: aquamarine;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 12px;
+      }
+      img {
+        display: inline-right;
+        size-adjust: 10px;
+      }
+    </style>
+    <h1>Working of bulb ON and OFF</h1>
     <image src="blubb on.png" id="img1"></image>
     <script>
       function bulboff() {
@@ -13,6 +33,7 @@
         document.getElementById("img1").src = "blubb on.png";
       }
     </script>
+    <br />
     <button type="button" onclick="bulbon()">Turn ON</button>
     <button type="button" onclick="bulboff()">Turn OFF</button>
   </body>
