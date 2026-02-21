@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Arithmetic Operations</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+        /* Simple attractive gradient */
+        background: linear-gradient(to right, #89f7fe, #66a6ff);
+      }
+
+      .container {
+        background: rgb(221, 229, 236);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 350px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 6px 0;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        color: white;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+      #demo {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #444;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Arithmetic Operations</h1>
+
+      <input type="text" id="num1" placeholder="First value" />
+      <input type="text" id="num2" placeholder="Second value" />
+
+      <button onclick="calculate('+')">Addition</button>
+      <button onclick="calculate('-')">Subtract</button>
+      <button onclick="calculate('*')">Multiply</button>
+      <button onclick="calculate('/')">Division</button>
+      <button onclick="calculate('%')">Remainder</button>
+
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      function calculate(operator) {
+        var a = Number(document.getElementById("num1").value);
+        var b = Number(document.getElementById("num2").value);
+        var result;
+
+        if (operator === "+") result = a + b;
+        if (operator === "-") result = a - b;
+        if (operator === "*") result = a * b;
+        if (operator === "/")
+          result = b !== 0 ? a / b : "Cannot divide by zero";
+        if (operator === "%") result = a % b;
+
+        document.getElementById("demo").innerHTML = "Result: " + result;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <title>Arithmetic Operations</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: lightgray;
+        text-align: center;
+      }
+    </style>
+    <h1>Arithematic Operations</h1>
+    <script>
+      function add() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var sum = a + b;
+        // document.getElementById(sum);
+        document.getElementById("demo").innerHTML = parseInt(sum);
+      }
+      function sub() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var sum = a - b;
+        // document.getElementById(sum);
+        document.getElementById("demo").innerHTML = parseInt(sum);
+      }
+      function div() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var sum = a / b;
+        // document.getElementById(sum);
+        document.getElementById("demo").innerHTML = parseInt(sum);
+      }
+      function mod() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var sum = a % b;
+        // document.getElementById(sum);
+        document.getElementById("demo").innerHTML = parseInt(sum);
+      }
+      function mul() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var sum = a * b;
+        // document.getElementById(sum);
+        document.getElementById("demo").innerHTML = parseInt(sum);
+      }
+    </script>
+    <form>
+      <input type="text" id="num1" placeholder="first value" />
+      <input type="text" id="num2" placeholder="second value" />
+      <br />
+      <br />
+      <button type="button" onclick="add()">Addition</button>
+      <br />
+      <br />
+      <button type="button" onclick="sub()">Subtract</button>
+      <br />
+      <br />
+      <button type="button" onclick="div()">Division</button>
+      <br />
+      <br />
+      <button type="button" onclick="mod()">Reminder</button>
+      <br />
+      <br />
+      <button type="button" onclick="mul()">Multiply</button>
+      <p id="demo"></p>
+    </form>
+  </body>
+</html>  -->
